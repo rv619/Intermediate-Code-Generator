@@ -13,10 +13,10 @@ of local and global variables. The idea of “scope” of a variable is similar 
 6. Another way to declare (or read) a variable is by using the statement “read <variable
 name>”.
 7. A variable can be printed using the statement “write <variable name>”.
-8. There are 3 types of flow control statements: -
-—> if condition then statements end
-—> if condition then statements else statements end
-—> repeat statements until condition
+8. There are 3 types of flow control statements: -<br />
+—> if condition then statements end<br />
+—> if condition then statements else statements end<br />
+—> repeat statements until condition<br />
 “condition” can be only boolean expression type.
 9. Arithmetic exprsessions can be on integer constants, variables, or parenthesis. Arith-
 metic operators are ‘+’,‘-’,‘*’,‘/’,‘%’ (as in C language).
@@ -27,17 +27,17 @@ boolean variables.
 multi-line comments are allowed.
 
 # Files
-TINYLT source file (.tnlt) – It contains the source code.
-Intermediate code file (.ic) – It contains the intermediate code in the form of quadru-
-ples when there are no errors in the TINYLT source file. In case of one or more errors,
-this file contains the details of those errors (error message along with the line number).
-Symbol table file (.symt) – It contains the symbol table (variable name, variable dec-
-laration line no., variable removal line no.). This file is created only when there are no
-errors in the TINYLT source file.
-
+It contains two main source files: -<br /><br />
+  lexer.l - flex source file.<br />
+  parser.y - bison source file.
+<br /><br />Both the flex and bison files are self-explanatory and well-commented.<br /><br />
+The other files include Makefile, auto-generated files (.c and .h files by flex and bison), test files (.tnlt files), and files containing test results (.ic and .symt files).<br /><br />
+TINYLT source file (.tnlt) – It contains the source code.<br />
+Intermediate code file (.ic) – It contains the intermediate code in the form of quadruples when there are no errors in the TINYLT source file. In case of one or more errors, this file contains the details of those errors (error message along with the line number).<br />
+Symbol table file (.symt) – It contains the symbol table (variable name, variable declaration line no., variable removal line no.). This file is created only when there are no errors in the TINYLT source file.
 
 # Running the ICG: -
-The ICG can be run using either of the following two commands: -
-./tinylt <TINYLT source file> <intermediate code file>
-./tinylt <TINYLT source file> <intermediate code file> <symbol table file>
+The ICG can be run using either of the following two commands: -<br />
+./tinylt \<TINYLT source file\> \<intermediate code file\><br />
+./tinylt \<TINYLT source file\> \<intermediate code file\> \<symbol table file\><br /><br />
 Just for the sake of convention, we will be using the extension .tnlt for the TINYLT source files, .ic for the intermediate code files, and .symt for the symbol table files.
