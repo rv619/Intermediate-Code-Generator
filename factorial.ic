@@ -1,0 +1,12 @@
+0000: read x
+0001: if x > 0 goto L0
+0002: goto L3
+0003: L0: fact := 1
+0004: L1: t1 := fact * x
+0005: fact := t1
+0006: t2 := x - 1
+0007: x := t2
+0008: if x == 0 goto L2
+0009: goto L1
+0010: L2: write fact
+0011: L3: end of program

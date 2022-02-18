@@ -1,0 +1,4 @@
+error::line 2: variable 'y' not declared in current scope
+error::line 6: variable 'y' not declared in current scope
+error::line 7: syntax error
+error::line 7: syntax error

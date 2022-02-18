@@ -1,0 +1,7 @@
+{ This is a testfile designed to test for error detection }
+x := y; {Should throw a 'y not declared in current scope' error}
+{Testing for 'out of scope' error}
+repeat
+  y := 3; 
+until y > 0; {Should throw a 'y not declared in current scope' error}
+x = 0 {Should throw 'syntax error(s)'}

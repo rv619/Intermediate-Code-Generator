@@ -1,0 +1,44 @@
+{ 
+  This is a testfile designed to test most of the test cases in a single go.
+  We have already started with multi-line comment. :P
+}
+x := 10; {Testing simple assignment statement}
+y := -20; {Testing unary assignment statement}
+z := x + y; {Testing binary assignment statement}
+a := (x + y) * (y + z) % x / (z + x); {Testing expression evaluation}
+m := -99; {Testing scope of variables. Variable alive till the end of program}
+s := 0; {Testing scope of variables continued...}
+{Nested if-else}
+if x < y then {Testing relational operator '<'}
+  if x < z then
+    m := x;
+    s := y + z;
+  else
+    m := z;
+    s := x + y;
+  end
+else
+  if y < z then
+    m := y;
+    s := x + z;
+  else
+    m := z;
+    s := x + y;
+  end
+end
+{So far so good? Testing single-line comment.}
+read b; {Testing read statement}
+{Nested repeat-until along with scope of variables}
+repeat
+  var1 := b; {Testing scope of variables. Variable dead when loop ends}
+  repeat
+    var2 := var1; {Testing scope of variables continued...}
+    write var2; {Testing write statement}
+    var1 := var1 - 1;
+  until var1 > 0; {Testing relational operator '>'}
+  b := b - 1;
+until b > 0;
+{Testing expression within if-statement}
+if (x + y) % s == z % s then {Testing relational operator '=='}
+  write z;
+end
